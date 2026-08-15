@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import LocalLaundryServiceIcon from '@mui/icons-material/LocalLaundryService';
 import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Link, NavLink } from 'react-router';
 
     function Navbar() {
         return (
@@ -29,11 +30,26 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
                 </Box>
 
                 <Box>
-                    <Button color="inherit">Home</Button>
-                    <Button color="inherit">Services</Button>
-                    <Button color="inherit">Pricing</Button>
-                    <Button color="inherit">How it works</Button>
-                    <Button color="inherit">Login</Button>
+                    <Button color="inherit" component={NavLink} to="/"
+                     sx={{
+                        "&.active":{fontWeight:700,textDecoration:"underline",},
+                        }}>Home</Button>
+                    <Button color="inherit" component={NavLink} to="/services" 
+                    sx={{
+                        "&.active":{fontWeight:700,textDecoration:"underline",},
+                        }}>Services</Button>
+                    <Button color="inherit" component={NavLink} to="/pricing"
+                    sx={{
+                        "&.active":{fontWeight:700,textDecoration:"underline",},
+                        }}>Pricing</Button>
+                    <Button color="inherit" component={NavLink} to="/booking"
+                    sx={{
+                        "&.active":{fontWeight:700,textDecoration:"underline",},
+                        }}>How it works</Button>
+                    <Button color="inherit" component={NavLink} to="/contact"
+                    sx={{
+                        "&.active":{fontWeight:700,textDecoration:"underline",},
+                        }}>Login</Button>
                     
                      <IconButton color="inherit">
                         <ShoppingCartIcon />

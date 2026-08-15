@@ -1,25 +1,31 @@
-//import { useState } from 'react' these are previous vite imports
-//import reactLogo from './assets/react.svg'
-//import viteLogo from './assets/vite.svg'
-//import heroImg from './assets/hero.png'
-//import './App.css'
-//import Navbar from 'Navbar.jsx'
 
+
+import { Route, Routes } from "react-router"
 import Navbar from "./Navbar"
+import Booking from "./pages/Booking"
+import Contact from "./pages/Contact"
 import Home from "./pages/Home"
+import Pricing from "./pages/Pricing"
+import Services from "./pages/Services"
 
 function App() {
-  //const [count, setCount] = useState(0)
+
 
   return (
-   <div>
-    <Navbar/>
-    <Home/>
-    {/* <h1>The Salavai Studio</h1> */}
-    {/* <p>Laundry made simple.</p> */}
-   </div>
-      
-  )
+  //  <div//// <Home/>// </div>
+  <>
+   <Navbar/>
+  <Routes>
+    
+    <Route path="/" element={<Home/>}/>
+    <Route path="/services" element={<Services/>}/>
+    <Route path="/pricing" element={<Pricing/>}/>
+    <Route path="/contact" element={<Contact/>}/>
+    <Route path="/booking" element={<Booking/>}/>
+ 
+  </Routes>   
+  </> 
+  );
 }
 
-export default App
+export default App;
